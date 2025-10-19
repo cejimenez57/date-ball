@@ -22,8 +22,8 @@ export async function POST(req: Request) {
       );
     }
 
-    const { idea, whenISO, youEmail, partnerEmail } = await req.json();
-    if (!idea || !whenISO || !youEmail || !partnerEmail) {
+    const { idea, whenISO, christianEmail, ashleyEmail } = await req.json();
+    if (!idea || !whenISO || !christianEmail || !ashleyEmail) {
       return NextResponse.json({ ok: false, error: "Missing fields" }, { status: 400 });
     }
 
@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev", // use this until your domain is verified
-      to: [youEmail, partnerEmail],
+      to: [christianEmail, ashleyEmail],
       subject,
       html,
     });
