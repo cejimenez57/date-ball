@@ -114,23 +114,23 @@ export default function ScheduleModal({ open, onClose, idea }: Props) {
 
           <div className="grid grid-cols-1 gap-3">
             <div>
-              <label className="block text-sm font-medium mb-1">Your email</label>
+              <label className="block text-sm font-medium mb-1">Christian's Email</label>
               <input
                 type="email"
                 value={youEmail}
                 onChange={(e) => setYouEmail(e.target.value)}
-                placeholder="you@example.com"
+                placeholder="email@email.com"
                 className="w-full rounded-lg border border-zinc-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#274c77]"
                 required
               />
             </div>
             <div>
-              <label className="block text-sm font-medium mb-1">Partner’s email</label>
+              <label className="block text-sm font-medium mb-1">Ashley's Email</label>
               <input
                 type="email"
                 value={partnerEmail}
                 onChange={(e) => setPartnerEmail(e.target.value)}
-                placeholder="partner@example.com"
+                placeholder="email@email.com"
                 className="w-full rounded-lg border border-zinc-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#274c77]"
                 required
               />
